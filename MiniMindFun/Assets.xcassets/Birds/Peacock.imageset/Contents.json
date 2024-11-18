@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Peacock.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

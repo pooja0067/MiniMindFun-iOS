@@ -40,6 +40,483 @@
       "name": "ten",
       "path": "ten.jpeg"
     }
+  ],
+  "shapes": [
+      {
+        "name": "Circle",
+        "path": "Circle.jpeg"
+      },
+      {
+        "name": "Square",
+        "path": "Square.jpeg"
+      },
+      {
+        "name": "Rectangle",
+        "path": "Rectangle.jpeg"
+      },
+      {
+        "name": "Pentagon",
+        "path": "Pentagon.jpeg"
+      },
+      {
+        "name": "Triangle",
+        "path": "Triangle.jpeg"
+      }
+  ],
+  "fruits": [
+      {
+        "name": "Apple",
+        "path": "Apple.jpeg"
+      },
+      {
+        "name": "Banana",
+        "path": "Banana.jpeg"
+      },
+      {
+        "name": "Mango",
+        "path": "Mango.jpeg"
+      },
+      {
+        "name": "Orange",
+        "path": "Orange.jpeg"
+      },
+      {
+        "name": "Watermelon",
+        "path": "Watermelon.jpeg"
+      },
+      {
+        "name": "Grapes",
+        "path": "Grapes.jpeg"
+      },
+      {
+        "name": "Pineapple",
+        "path": "Pineapple.jpeg"
+      },
+      {
+        "name": "Pomegranate",
+        "path": "Pomegranate.jpeg"
+      },
+      {
+        "name": "Strawberry",
+        "path": "Strawberry.jpeg"
+      },
+      {
+        "name": "Cherry",
+        "path": "Cherry.jpeg"
+      }
+    ],
+  "vegetables": [
+      {
+        "name": "Tomato",
+        "path": "Tomato.jpeg"
+      },
+      {
+        "name": "Potato",
+        "path": "Potato.jpeg"
+      },
+      {
+        "name": "Carrot",
+        "path": "Carrot.jpeg"
+      },
+      {
+        "name": "Cabbage",
+        "path": "Cabbage.jpeg"
+      },
+      {
+        "name": "Cauliflower",
+        "path": "Cauliflower.jpeg"
+      },
+      {
+        "name": "Beetroot",
+        "path": "Beetroot.jpeg"
+      },
+      {
+        "name": "Cucumber",
+        "path": "Cucumber.jpeg"
+      },
+      {
+        "name": "Spinach",
+        "path": "Spinach.jpeg"
+      },
+      {
+        "name": "Bittergourd",
+        "path": "Bittergourd.jpeg"
+      },
+      {
+        "name": "Peas",
+        "path": "Peas.jpeg"
+      },
+      {
+        "name": "Capsicum",
+        "path": "Capsicum.jpeg"
+      },
+      {
+        "name": "Ladyfinger",
+        "path": "Ladyfinger.jpeg"
+      }
+    ],
+  "colors": [
+      {
+        "name": "Red",
+        "path": "Red.jpeg"
+      },
+      {
+        "name": "Blue",
+        "path": "Blue.jpeg"
+      },
+      {
+        "name": "Yellow",
+        "path": "Yellow.jpeg"
+      },
+      {
+        "name": "Purple",
+        "path": "Purple.jpeg"
+      },
+      {
+        "name": "Pink",
+        "path": "Pink.jpeg"
+      },
+      {
+        "name": "Orange",
+        "path": "Orange.jpeg"
+      },
+      {
+        "name": "Brown",
+        "path": "Brown.jpeg"
+      },
+      {
+        "name": "Black",
+        "path": "Black.jpeg"
+      },
+      {
+        "name": "White",
+        "path": "White.jpeg"
+      },
+      {
+        "name": "Green",
+        "path": "Green.jpeg"
+      },
+      {
+        "name": "Gray",
+        "path": "Gray.jpeg"
+      }
+    ],
+  "birds": [
+      {
+        "name": "Parrot",
+        "path": "Parrot.jpeg"
+      },
+      {
+        "name": "Sparrow",
+        "path": "Sparrow.jpeg"
+      },
+      {
+        "name": "Owl",
+        "path": "Owl.jpeg"
+      },
+      {
+        "name": "Peacock",
+        "path": "Peacock.jpeg"
+      },
+      {
+        "name": "Pigeon",
+        "path": "Pigeon.jpeg"
+      },
+      {
+        "name": "Crow",
+        "path": "Crow.jpeg"
+      },
+      {
+        "name": "Crane",
+        "path": "Crane.jpeg"
+      },
+      {
+        "name": "Flamingo",
+        "path": "Flamingo.jpeg"
+      },
+      {
+        "name": "Duck",
+        "path": "Duck.jpeg"
+      },
+      {
+        "name": "Eagle",
+        "path": "Eagle.jpeg"
+      },
+      {
+        "name": "Woodpecker",
+        "path": "Woodpecker.jpeg"
+      },
+      {
+        "name": "Kingfisher",
+        "path": "Kingfisher.jpeg"
+      }
+    ],
+  "animals": [
+      {
+        "name": "Tiger",
+        "path": "Tiger.jpeg"
+      },
+      {
+        "name": "Lion",
+        "path": "Lion.jpeg"
+      },
+      {
+        "name": "Elephant",
+        "path": "Elephant.jpeg"
+      },
+      {
+        "name": "Fox",
+        "path": "Fox.jpeg"
+      },
+      {
+        "name": "Camel",
+        "path": "Camel.jpeg"
+      },
+      {
+        "name": "Cow",
+        "path": "Cow.jpeg"
+      },
+      {
+        "name": "Goat",
+        "path": "Goat.jpeg"
+      },
+      {
+        "name": "Horse",
+        "path": "Horse.jpeg"
+      },
+      {
+        "name": "Zebra",
+        "path": "Zebra.jpeg"
+      },
+      {
+        "name": "Dog",
+        "path": "Dog.jpeg"
+      },
+      {
+        "name": "Cat",
+        "path": "Cat.jpeg"
+      },
+      {
+        "name": "Donkey",
+        "path": "Donkey.jpeg"
+      },
+      {
+        "name": "Pig",
+        "path": "Pig.jpeg"
+      },
+      {
+        "name": "Deer",
+        "path": "Deer.jpeg"
+      },
+      {
+        "name": "Bear",
+        "path": "Bear.jpeg"
+      },
+      {
+        "name": "Rabbit",
+        "path": "Rabbit.jpeg"
+      },
+      {
+        "name": "Buffalo",
+        "path": "Buffalo.jpeg"
+      }
+    ],
+  "vehicals": [
+      {
+        "name": "Car",
+        "path": "Car.jpeg"
+      },
+      {
+        "name": "Truck",
+        "path": "Truck.jpeg"
+      },
+      {
+        "name": "Bike",
+        "path": "Bike.jpeg"
+      },
+      {
+        "name": "Bus",
+        "path": "Bus.jpeg"
+      },
+      {
+        "name": "Van",
+        "path": "Van.jpeg"
+      },
+      {
+        "name": "Scooter",
+        "path": "Scooter.jpeg"
+      },
+      {
+        "name": "Bicycle",
+        "path": "Bicycle.jpeg"
+      },
+      {
+        "name": "Helicopter",
+        "path": "Helicopter.jpeg"
+      },
+      {
+        "name": "Train",
+        "path": "Train.jpeg"
+      },
+      {
+        "name": "Airplane",
+        "path": "Airplane.jpeg"
+      },
+      {
+        "name": "Ambulance",
+        "path": "Ambulance.jpeg"
+      },
+      {
+        "name": "Tractor",
+        "path": "Tractor.jpeg"
+      }
+    ],
+  "profession": [
+      {
+        "name": "Engineer",
+        "path": "Engineer.jpeg"
+      },
+      {
+        "name": "Doctor",
+        "path": "Doctor.jpeg"
+      },
+      {
+        "name": "Policeman",
+        "path": "Policeman.jpeg"
+      },
+      {
+        "name": "Postman",
+        "path": "Postman.jpeg"
+      },
+      {
+        "name": "Fireman",
+        "path": "Fireman.jpeg"
+      },
+      {
+        "name": "Teacher",
+        "path": "Teacher.jpeg"
+      },
+      {
+        "name": "Lawyer",
+        "path": "Lawyer.jpeg"
+      },
+      {
+        "name": "Chef",
+        "path": "Chef.jpeg"
+      },
+      {
+        "name": "Soldier",
+        "path": "Soldier.jpeg"
+      },
+      {
+        "name": "Pilot",
+        "path": "Pilot.jpeg"
+      }
+    ],
+  "alphabets" : [
+      {
+        "name": "A",
+        "path": "A.jpeg"
+      },
+      {
+        "name": "B",
+        "path": "B.jpeg"
+      },
+      {
+        "name": "C",
+        "path": "C.jpeg"
+      },
+      {
+        "name": "D",
+        "path": "D.jpeg"
+      },
+      {
+        "name": "E",
+        "path": "E.jpeg"
+      },
+      {
+        "name": "F",
+        "path": "F.jpeg"
+      },
+      {
+        "name": "G",
+        "path": "G.jpeg"
+      },
+      {
+        "name": "H",
+        "path": "H.jpeg"
+      },
+      {
+        "name": "I",
+        "path": "I.jpeg"
+      },
+      {
+        "name": "J",
+        "path": "J.jpeg"
+      },
+      {
+        "name": "K",
+        "path": "K.jpeg"
+      },
+      {
+          "name": "L",
+          "path": "L.jpeg"
+      },
+      {
+        "name": "M",
+        "path": "M.jpeg"
+      },
+      {
+        "name": "N",
+        "path": "N.jpeg"
+      },
+      {
+        "name": "O",
+        "path": "O.jpeg"
+      },
+      {
+        "name": "P",
+        "path": "P.jpeg"
+      },
+      {
+        "name": "Q",
+        "path": "Q.jpeg"
+      },
+      {
+        "name": "R",
+        "path": "R.jpeg"
+      },
+      {
+        "name": "S",
+        "path": "S.jpeg"
+      },
+      {
+        "name": "T",
+        "path": "T.jpeg"
+      },
+      {
+        "name": "U",
+        "path": "U.jpeg"
+      },
+      {
+        "name": "V",
+        "path": "V.jpeg"
+      },
+      {
+        "name": "W",
+        "path": "W.jpeg"
+      },
+      {
+        "name": "X",
+        "path": "X.jpeg"
+      },
+      {
+        "name": "Y",
+        "path": "Y.jpeg"
+      },
+      {
+        "name": "Z",
+        "path": "Z.jpeg"
+      }
   ]
 }
-

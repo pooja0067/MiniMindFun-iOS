@@ -20,6 +20,30 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
+    func navigateToDetailVeiwController(indexPath: IndexPath) {
+        
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "miniMindDetailViewController") as? miniMindDetailViewController else {
+            print("Failed to instantiate miniMindDetailViewController")
+            return
+        }
+        
+        detailVC.detailText = items[indexPath.item]
+        
+        let navController = UINavigationController(rootViewController: detailVC)
+        navController.modalPresentationStyle = .fullScreen
+        
+        // Present the view controller
+        guard let navigationController = navigationController else {
+            print("Navigation controller is nil")
+            return
+        }
+        navigationController.present(navController, animated: true)
+        
+        if items[indexPath.row] == "Shapes" || items[indexPath.row] == "Colors" || items[indexPath.row] == "Numbers" || items[indexPath.row] == "Alphabets" || items[indexPath.row] == "Fruits" || items[indexPath.row] == "Vehicals" || items[indexPath.row] == "Birds" || items[indexPath.row] == "Animals" || items[indexPath.row] == "Profession"  || items[indexPath.row] == "Vegetables" {
+            detailVC.loadItemJSON(typeOfItem: items[indexPath.row])
+        }
+    }
 
 }
 
@@ -41,43 +65,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
        // MARK: - UICollectionViewDelegate Method (Optional)
        
        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-           guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "miniMindDetailViewController") as? miniMindDetailViewController else {
-               print("Failed to instantiate miniMindDetailViewController")
-               return
-           }
-
-           detailVC.detailText = items[indexPath.item]
-
-           let navController = UINavigationController(rootViewController: detailVC)
-           navController.modalPresentationStyle = .fullScreen
-
-           // Present the view controller
-           guard let navigationController = navigationController else {
-               print("Navigation controller is nil")
-               return
-           }
-           navigationController.present(navController, animated: true)
-           if items[indexPath.row] == "Shapes" {
-               
-           } else if items[indexPath.row] == "Colors" {
-               
-           } else if items[indexPath.row] == "Numbers" {
-               detailVC.loadNumbers()
-           } else if items[indexPath.row] == "Alphabets" {
-               
-           } else if items[indexPath.row] == "Fruits" {
-               
-           } else if items[indexPath.row] == "Animals" {
-               
-           } else if items[indexPath.row] == "Vegetables" {
-               
-           } else if items[indexPath.row] == "Profession" {
-               
-           } else if items[indexPath.row] == "Vehicals" {
-               
-           } else if items[indexPath.row] == "Birds" {
-               
-           }
+           navigateToDetailVeiwController(indexPath: indexPath)
        }
     
 }

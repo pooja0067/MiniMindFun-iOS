@@ -7,11 +7,20 @@
 
 import Foundation
 
-struct Number: Decodable {
+struct ItemType: Decodable {
     let name: String
     let path: String
 }
 
-struct NumberCollection: Decodable {
-    let numbers: [Number]
+struct ItemCollection: Decodable {
+    let numbers: [ItemType]
+    let shapes: [ItemType]
+    let fruits: [ItemType]
+    let vegetables: [ItemType]
+    let colors: [ItemType]
+    let birds: [ItemType]
+    let animals: [ItemType]
+    let profession: [ItemType]
+    let vehicals: [ItemType]
+    let alphabets: [ItemType]
 }
