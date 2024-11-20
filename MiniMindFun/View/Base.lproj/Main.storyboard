@@ -135,7 +135,7 @@
                                             <constraint firstAttribute="height" constant="50" id="q6u-nc-I9E"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hzH-6G-cM8">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pause.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hzH-6G-cM8">
                                         <rect key="frame" x="155.66666666666666" y="0.66666666666666785" width="50" height="48.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QE4-Er-U7S"/>
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEL-xq-s1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3254.1984732824426" y="-208.45070422535213"/>
+            <point key="canvasLocation" x="1918" y="-208"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gCH-ns-PbS">
@@ -204,7 +204,7 @@
         <image name="Shapes" width="1280" height="1280"/>
         <image name="arrowshape.forward.circle" catalog="system" width="128" height="123"/>
         <image name="arrowshape.left.circle" catalog="system" width="128" height="123"/>
-        <image name="speaker.circle" catalog="system" width="128" height="123"/>
+        <image name="pause.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class miniMindDetailViewController: UIViewController {
     
@@ -19,6 +20,10 @@ class miniMindDetailViewController: UIViewController {
     var detailText = ""
     var Items: [ItemType] = []
     var currentIndex = 0
+    private var currentWord: String = ""
+    let speechSynthesizer = AVSpeechSynthesizer()
+    private var isPlaying = true
+    private var soundImageName =  ""
     
     override func viewDidLoad() {
         setUpNavBar()
@@ -29,6 +34,9 @@ class miniMindDetailViewController: UIViewController {
         }
         if leftImage != nil {
             leftAddTapGestureToImage()
+        }
+        if speakerImage != nil {
+            speakerTapGestureToImage()
         }
         leftImage.isUserInteractionEnabled = false
         leftImage.tintColor = .lightGray
@@ -49,6 +57,12 @@ class miniMindDetailViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(leftImageTapped))
         leftImage.isUserInteractionEnabled = true
         leftImage.addGestureRecognizer(tapGesture)
+    }
+    
+    func speakerTapGestureToImage() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(speakerTapped))
+        speakerImage.isUserInteractionEnabled = true
+        speakerImage.addGestureRecognizer(tapGesture)
     }
     
     func loadItemJSON(typeOfItem: String) {
@@ -88,14 +102,13 @@ class miniMindDetailViewController: UIViewController {
             } else if typeOfItem == "Alphabets" {
                 self.Items = numberCollection.alphabets
             }
-            
+            // Announce the sound once screen is opened
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.playSound(with: self.Items[self.currentIndex].name)
+            }
         } catch {
             print("Failed to load or parse JSON: \(error)")
         }
-    }
-    
-    func getUIImage(named imageName: String) -> UIImage? {
-        return UIImage(named: imageName)
     }
     
     // Step 5: Method to display the current image based on the index
@@ -124,6 +137,12 @@ class miniMindDetailViewController: UIViewController {
             displayImage()
             leftImage.isUserInteractionEnabled = true
             leftImage.tintColor = .black
+            //Play sound on click left
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                if self.soundImageName == "pause.circle" {
+                    self.playSound(with: self.Items[self.currentIndex].name)
+                }
+            }
         }
     }
     
@@ -141,10 +160,59 @@ class miniMindDetailViewController: UIViewController {
         displayImage()
         rightImage.isUserInteractionEnabled = true
         rightImage.tintColor = .black
+        //Play sound on click left
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if self.soundImageName == "pause.circle" {
+                self.playSound(with: self.Items[self.currentIndex].name)
+            }
+        }
     }
     
     @objc func doneButtonTapped() {
         self.dismiss(animated: true , completion: nil)
+    }
+    
+    @objc func speakerTapped() {
+        isPlaying.toggle() // Toggle play/pause state
+        if isPlaying {
+            if !speechSynthesizer.isSpeaking {
+                self.playSound(with: self.Items[self.currentIndex].name)
+            }  else {
+                speechSynthesizer.continueSpeaking()
+            }
+        } else {
+            pauseSound()
+        }
+        // Update the image based on the current state
+        soundImageName = isPlaying ? "pause.circle" : "play.circle"
+        speakerImage.image = UIImage(systemName: soundImageName)
+    }
+    
+    func playSound(with soundString: String) {
+        if !speechSynthesizer.isSpeaking {
+            speak(word: soundString)
+        } else {
+            speak(word: soundString)
+            speechSynthesizer.continueSpeaking()
+        }
+    }
+    
+    func pauseSound() {
+        speechSynthesizer.pauseSpeaking(at: .immediate)
+    }
+
+    func speak(word: String) {
+        // Create a speech utterance
+        let utterance = AVSpeechUtterance(string: word)
+        // Customize the utterance if needed
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+        utterance.rate = 0.3 // Adjust to a slower rate (default is 0.5)
+        utterance.pitchMultiplier = 1.0 // Normal pitch
+        utterance.volume = 1.0 // Maximum volume
+        // Speak the word
+        speechSynthesizer.speak(utterance)
+        currentWord = word
     }
     
 }
