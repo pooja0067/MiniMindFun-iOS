@@ -109,7 +109,7 @@ class miniMindDetailViewController: UIViewController {
         detailImage.image = UIImage(named: currentImage.path)
     }
     
-    // Step 5: Method called when image is tapped
+    // Step 5: Method called when right image is tapped
     @objc func rightImageTapped() {
         currentIndex += 1
         // Loop back to the first image if the end is reached
@@ -127,7 +127,7 @@ class miniMindDetailViewController: UIViewController {
         }
     }
     
-    // Step 5: Method called when image is tapped
+    // Step 6: Method called when left image is tapped
     @objc func leftImageTapped() {
         currentIndex -= 1
         // Loop back to the first image if the end is reached

@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let items = ["Shapes", "Colors", "Numbers", "Fruits", "Vegetables", "Animals", "Birds", "Vehicals", "Alphabets", "Profession"]
+    let items = ["Alphabets", "Numbers", "Colors",  "Fruits", "Vegetables", "Animals", "Birds", "Vehicals", "Profession", "Shapes"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         collectionView.delegate = self
     }
     
-    func navigateToDetailVeiwController(indexPath: IndexPath) {
+    func navigateToDetailViewController(indexPath: IndexPath) {
         
         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "miniMindDetailViewController") as? miniMindDetailViewController else {
             print("Failed to instantiate miniMindDetailViewController")
@@ -65,7 +65,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
        // MARK: - UICollectionViewDelegate Method (Optional)
        
        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-           navigateToDetailVeiwController(indexPath: indexPath)
+           navigateToDetailViewController(indexPath: indexPath)
        }
     
 }
