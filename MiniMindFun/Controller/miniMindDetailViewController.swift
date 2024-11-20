@@ -203,16 +203,26 @@ class miniMindDetailViewController: UIViewController {
 
     func speak(word: String) {
         // Create a speech utterance
-        let utterance = AVSpeechUtterance(string: word)
+        let wording = splitWords(speakingWord: word)
+        let utterance = AVSpeechUtterance(string: wording)
         // Customize the utterance if needed
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = AVSpeechUtteranceDefaultSpeechRate
-        utterance.rate = 0.3 // Adjust to a slower rate (default is 0.5)
+        utterance.rate = 0.2 // Adjust to a slower rate (default is 0.5)
         utterance.pitchMultiplier = 1.0 // Normal pitch
         utterance.volume = 1.0 // Maximum volume
         // Speak the word
         speechSynthesizer.speak(utterance)
-        currentWord = word
+        //currentWord = word
+    }
+    
+    func splitWords(speakingWord: String) ->  String {
+        if speakingWord.count <= 1 {
+            return speakingWord
+        } else {
+            let spacedString = speakingWord.map { String($0) + " " }.joined()
+            return spacedString + speakingWord
+        }
     }
     
 }
