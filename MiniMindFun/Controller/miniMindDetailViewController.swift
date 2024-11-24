@@ -20,10 +20,10 @@ class miniMindDetailViewController: UIViewController {
     var detailText = ""
     var Items: [ItemType] = []
     var currentIndex = 0
-    private var currentWord: String = ""
     let speechSynthesizer = AVSpeechSynthesizer()
     private var isPlaying = true
     private var soundImageName =  ""
+    private var currentPlayingValue = true
     
     override func viewDidLoad() {
         setUpNavBar()
@@ -138,10 +138,8 @@ class miniMindDetailViewController: UIViewController {
             leftImage.isUserInteractionEnabled = true
             leftImage.tintColor = .black
             //Play sound on click left
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                if self.soundImageName == "pause.circle" {
-                    self.playSound(with: self.Items[self.currentIndex].name)
-                }
+            if currentPlayingValue == true {
+                self.playSound(with: self.Items[self.currentIndex].name)
             }
         }
     }
@@ -161,10 +159,8 @@ class miniMindDetailViewController: UIViewController {
         rightImage.isUserInteractionEnabled = true
         rightImage.tintColor = .black
         //Play sound on click left
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            if self.soundImageName == "pause.circle" {
-                self.playSound(with: self.Items[self.currentIndex].name)
-            }
+        if currentPlayingValue == true {
+            self.playSound(with: self.Items[self.currentIndex].name)
         }
     }
     
@@ -186,6 +182,7 @@ class miniMindDetailViewController: UIViewController {
         // Update the image based on the current state
         soundImageName = isPlaying ? "pause.circle" : "play.circle"
         speakerImage.image = UIImage(systemName: soundImageName)
+        currentPlayingValue  = isPlaying
     }
     
     func playSound(with soundString: String) {
@@ -200,7 +197,7 @@ class miniMindDetailViewController: UIViewController {
     func pauseSound() {
         speechSynthesizer.pauseSpeaking(at: .immediate)
     }
-
+    
     func speak(word: String) {
         // Create a speech utterance
         let wording = splitWords(speakingWord: word)
@@ -213,7 +210,6 @@ class miniMindDetailViewController: UIViewController {
         utterance.volume = 1.0 // Maximum volume
         // Speak the word
         speechSynthesizer.speak(utterance)
-        //currentWord = word
     }
     
     func splitWords(speakingWord: String) ->  String {
@@ -224,7 +220,6 @@ class miniMindDetailViewController: UIViewController {
             return spacedString + speakingWord
         }
     }
-    
 }
 
 
